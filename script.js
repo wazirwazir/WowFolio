@@ -139,3 +139,16 @@ const headerLogoConatiner = document.querySelector('.main-header__logo-container
 headerLogoConatiner.addEventListener('click', () => {
   location.href = 'index.html'
 })
+
+//<a href="mailto:abidakunwazir@gmail.com?subject=hi&body=i'm chucky">Contact</a></button>
+function truth() {
+  const nameInput = document.getElementsByClassName('contact__form-field-input')[0]
+  const message = document.getElementsByClassName('contact__form-field-input')[2]
+  const submit = document.getElementById('yore')
+  const submitter = document.getElementsByClassName('contact__form-submit')
+
+  submitter.addEventListener('click', () => {
+    submit.href = `mailto:abidakunwazir@gmail.com?subject=${nameInput}&body=${message}`
+  })
+}
+truth()
